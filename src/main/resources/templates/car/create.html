@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Autó Creating form</title>
+
+    <link rel="stylesheet"
+          th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+</head>
+<body style="background-color:#09203C" class="text-white">
+
+<div class="container">
+
+    <h3 class="pt-5">Autó létrehozás</h3>
+
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <form method="post"
+                  th:action="@{/car-toyota/create}">
+                <div class="form-group">
+                    <label for="model">Autó készítő form</label>
+                </div>
+                <div class="form-group">
+                    <label for="model">ID</label>
+                    <input type="text"
+                           id="Id"
+                           name="Id"
+                           readonly
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text"
+                           id="model"
+                           name="model"
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="motor">Motor típus</label>
+                    <input type="number" step="0.01"
+                           id="motor"
+                           name="motor"
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="equipment">Felszereltség</label>
+                    <input type="text"
+                           id="equipment"
+                           name="equipment"
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="consumption">Fogyasztás</label>
+                    <input type="number" step="0.01"
+                           id="consumption"
+                           name="consumption"
+                           class="form-control"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="price">Ár</label>
+                    <input type="number"
+                           id="price"
+                           name="price"
+                           class="form-control"
+                    />
+                </div>
+
+                <button class="btn btn-primary pt-2 mt-2"
+                        type="submit">Autó hozzáadás
+                </button>
+                <a th:href="@{/car-toyota}"
+                   class="btn btn-secondary pt-2 mt-2"
+                   type="submit">Mégsem</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
