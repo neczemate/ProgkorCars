@@ -35,14 +35,14 @@ public class CarController {
         return "car/edit";
     }
 
-    /*@PostMapping(value = "/update",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    @PostMapping(value = "/update",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public String createCar(final Model model,
-                            final @RequestParam(value = "id", required = false) Long id,
+                            final @RequestParam(value = "Id", required = false) Long id,
                             final Car carChanges){
         final Car car = carService.updateCar(id, carChanges);
         model.addAttribute("car",car);
         return "car/edit";
-    }*/
+    }
 
     @GetMapping("create")
     public String createCarForm(final Model model){
